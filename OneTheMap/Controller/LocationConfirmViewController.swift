@@ -22,7 +22,11 @@ class LocationConfirmViewController: UIViewController {
     }
     
     @IBAction func confirm(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        NetworkClient.postLocation(firstName: pin.user.firstName, lastName: pin.user.lastName, mapString: pin.address, mediaURL: pin.mediaURL, latitude: pin.coordinate.latitude, longitude: pin.coordinate.longitude) { (success, error) in
+            if success {
+                self.navigationController?.dismiss(animated: true)
+            }
+        }
     }
     
     private func dropPinOnMap() {

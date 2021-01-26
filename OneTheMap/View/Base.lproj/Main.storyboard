@@ -164,6 +164,7 @@
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <connections>
                                     <action selector="post:" destination="kU3-6r-pGX" id="bHi-TE-nW8"/>
+                                    <segue destination="zuM-Zc-eDH" kind="presentation" identifier="addLocation" modalPresentationStyle="fullScreen" id="IQq-sh-fiw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icon_refresh" id="GWC-Vr-Laa" userLabel="refresh">
@@ -177,12 +178,27 @@
                     <connections>
                         <outlet property="indicator" destination="z6a-XO-1Jh" id="vFe-Tx-2Eo"/>
                         <outlet property="tableView" destination="Ekk-QA-svd" id="ptF-qg-bc6"/>
-                        <segue destination="XPY-VN-1vA" kind="show" identifier="addLocation" id="TQG-5z-fep"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYK-Mo-2Dl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2753.6231884057975" y="497.54464285714283"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QFv-Pm-GZv">
+            <objects>
+                <navigationController id="zuM-Zc-eDH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gzy-OM-zYh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XPY-VN-1vA" kind="relationship" relationship="rootViewController" id="SpY-fr-Q72"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIk-os-AUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3743" y="234"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="9qW-Pk-eFJ">
@@ -250,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcY-m2-Vxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3938" y="234"/>
+            <point key="canvasLocation" x="4629" y="234"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="a72-L6-58b">
@@ -295,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6u-ZN-100" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4780" y="234"/>
+            <point key="canvasLocation" x="5509" y="234"/>
         </scene>
         <!--On the Map-->
         <scene sceneID="sSZ-cs-oKQ">
@@ -335,6 +351,7 @@
                                 <color key="tintColor" systemColor="systemTealColor"/>
                                 <connections>
                                     <action selector="post:" destination="1Iu-ru-PzN" id="Cve-A8-3Fp"/>
+                                    <segue destination="zuM-Zc-eDH" kind="presentation" identifier="addLocation" modalPresentationStyle="fullScreen" id="cO9-Lk-shv"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icon_refresh" id="Jo1-VO-Y3H" userLabel="refresh">
@@ -349,7 +366,6 @@
                     <connections>
                         <outlet property="indicator" destination="Oev-h3-iSN" id="7n7-Rf-elP"/>
                         <outlet property="mapView" destination="Bzl-cG-ap1" id="gv4-5G-T5d"/>
-                        <segue destination="XPY-VN-1vA" kind="show" identifier="addLocation" id="ne9-C8-RtJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlh-dZ-fIl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -415,7 +431,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TQG-5z-fep"/>
+        <segue reference="cO9-Lk-shv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_addpin" width="24" height="24"/>

@@ -11,4 +11,6 @@ import MapKit
 struct Pin {
     let coordinate: CLLocationCoordinate2D
     let address: String
+    let mediaURL: String
+    let user: User
 }

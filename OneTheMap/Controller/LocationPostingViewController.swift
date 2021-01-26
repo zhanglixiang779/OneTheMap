@@ -18,7 +18,7 @@ class LocationPostingViewController: UIViewController {
     }
 
     @IBAction func cancelTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
     }
     
     @IBAction func findLocation(_ sender: Any) {
@@ -54,12 +54,8 @@ class LocationPostingViewController: UIViewController {
                 return
             }
             
-            NetworkClient.postLocation(firstName: user.firstName, lastName: user.lastName, mapString: self.location.text!, mediaURL: self.mediaURL.text!, latitude: coordinate.latitude, longitude: coordinate.longitude) { (success, error) in
-                let pin = Pin(coordinate: coordinate, address: self.location.text!)
-                if success {
-                    self.performSegue(withIdentifier: "toLocationConfirmPage", sender: pin)
-                }
-            }
+            let pin = Pin(coordinate: coordinate, address: self.location.text!, mediaURL: self.mediaURL.text!, user: user)
+            self.performSegue(withIdentifier: "toLocationConfirmPage", sender: pin)
         }
     }
 }
