@@ -60,8 +60,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="DfD-7e-VlC">
-                                <rect key="frame" x="197" y="379.5" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="DfD-7e-VlC">
+                                <rect key="frame" x="188.5" y="379.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemTealColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -137,8 +138,9 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="z6a-XO-1Jh">
-                                <rect key="frame" x="197" y="440.5" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="z6a-XO-1Jh">
+                                <rect key="frame" x="188.5" y="432" width="37" height="37"/>
+                                <color key="color" systemColor="systemTealColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jyB-a0-Y8O"/>
@@ -232,6 +234,10 @@
                                     <action selector="findLocation:" destination="XPY-VN-1vA" eventType="touchUpInside" id="5B9-Fd-JNn"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-fn-wMt">
+                                <rect key="frame" x="188.5" y="395" width="37" height="37"/>
+                                <color key="color" systemColor="systemTealColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M71-7S-D9v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -240,7 +246,9 @@
                             <constraint firstItem="Owl-gf-G49" firstAttribute="leading" secondItem="M71-7S-D9v" secondAttribute="leading" constant="50" id="4Gq-OA-5Vq"/>
                             <constraint firstItem="FoJ-yA-na8" firstAttribute="trailing" secondItem="Owl-gf-G49" secondAttribute="trailing" id="Dae-6k-igK"/>
                             <constraint firstItem="M71-7S-D9v" firstAttribute="trailing" secondItem="ISQ-Dd-J0i" secondAttribute="trailing" id="Faw-8T-NWn"/>
+                            <constraint firstItem="BKX-fn-wMt" firstAttribute="top" secondItem="Jk5-Wz-5nw" secondAttribute="bottom" constant="20" id="Ihw-s3-b5W"/>
                             <constraint firstItem="ISQ-Dd-J0i" firstAttribute="leading" secondItem="M71-7S-D9v" secondAttribute="leading" id="Lzk-nC-Id0"/>
+                            <constraint firstItem="BKX-fn-wMt" firstAttribute="centerX" secondItem="M71-7S-D9v" secondAttribute="centerX" id="QDf-MZ-JLB"/>
                             <constraint firstItem="Jk5-Wz-5nw" firstAttribute="trailing" secondItem="FoJ-yA-na8" secondAttribute="trailing" id="kMF-J0-aWj"/>
                             <constraint firstItem="M71-7S-D9v" firstAttribute="trailing" secondItem="Owl-gf-G49" secondAttribute="trailing" constant="50" id="lE7-At-wjE"/>
                             <constraint firstItem="FoJ-yA-na8" firstAttribute="leading" secondItem="Owl-gf-G49" secondAttribute="leading" id="ppG-UA-mLi"/>
@@ -259,6 +267,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="indicator" destination="BKX-fn-wMt" id="QMO-wO-DAq"/>
                         <outlet property="location" destination="Owl-gf-G49" id="rWo-vw-a1f"/>
                         <outlet property="mediaURL" destination="FoJ-yA-na8" id="sjU-OE-1f8"/>
                         <segue destination="Uu9-NY-kwx" kind="show" identifier="toLocationConfirmPage" id="FY3-eY-myq"/>
@@ -290,10 +299,15 @@
                                     <action selector="confirm:" destination="Uu9-NY-kwx" eventType="touchUpInside" id="V9a-zY-ajC"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-aI-wW8">
+                                <rect key="frame" x="188.5" y="753" width="37" height="37"/>
+                                <color key="color" systemColor="systemTealColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lre-PD-QOI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aZe-aI-wW8" firstAttribute="centerX" secondItem="Lre-PD-QOI" secondAttribute="centerX" id="1Qt-QP-jRF"/>
                             <constraint firstItem="EYq-Rm-jUG" firstAttribute="trailing" secondItem="7wH-Xi-k8i" secondAttribute="trailing" constant="16" id="A7C-qB-fhW"/>
                             <constraint firstItem="EYq-Rm-jUG" firstAttribute="leading" secondItem="Lre-PD-QOI" secondAttribute="leading" id="Cw6-p7-5NO"/>
                             <constraint firstAttribute="bottom" secondItem="EYq-Rm-jUG" secondAttribute="bottom" id="DRx-nW-HuA"/>
@@ -302,10 +316,12 @@
                             <constraint firstItem="EYq-Rm-jUG" firstAttribute="bottom" secondItem="7wH-Xi-k8i" secondAttribute="bottom" constant="50" id="eZx-MU-Qud"/>
                             <constraint firstItem="7wH-Xi-k8i" firstAttribute="centerX" secondItem="EYq-Rm-jUG" secondAttribute="centerX" id="jT4-sr-9Pf"/>
                             <constraint firstItem="EYq-Rm-jUG" firstAttribute="trailing" secondItem="Lre-PD-QOI" secondAttribute="trailing" id="m12-VF-LqZ"/>
+                            <constraint firstItem="7wH-Xi-k8i" firstAttribute="top" secondItem="aZe-aI-wW8" secondAttribute="bottom" constant="20" id="pxZ-bK-rEL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="tZF-OR-D18"/>
                     <connections>
+                        <outlet property="indicator" destination="aZe-aI-wW8" id="MPg-eT-ASJ"/>
                         <outlet property="mapView" destination="EYq-Rm-jUG" id="qrc-Pv-tHF"/>
                     </connections>
                 </viewController>
@@ -324,8 +340,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bzl-cG-ap1">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </mapView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-h3-iSN">
-                                <rect key="frame" x="197" y="440.5" width="20" height="20"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-h3-iSN">
+                                <rect key="frame" x="188.5" y="432" width="37" height="37"/>
+                                <color key="color" systemColor="systemTealColor"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JU1-Hb-vJV"/>
@@ -431,7 +448,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cO9-Lk-shv"/>
+        <segue reference="IQq-sh-fiw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="icon_addpin" width="24" height="24"/>

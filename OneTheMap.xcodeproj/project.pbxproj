@@ -122,18 +122,18 @@
 		313DBD2325BCEEBF00A5306C /* OneTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				313DBD3D25BCFD1D00A5306C /* Assets */,
-				313DBD3C25BCFCCB00A5306C /* View */,
-				313DBD3B25BCFCC300A5306C /* Model */,
-				313DBD3A25BCFCB500A5306C /* Controller */,
-				313DBD2425BCEEBF00A5306C /* AppDelegate.swift */,
-				313DBD2625BCEEBF00A5306C /* SceneDelegate.swift */,
 				313DBD3225BCEEBF00A5306C /* Info.plist */,
+				31DAC5A325C11F7200FB5A70 /* Storyboards */,
+				31DAC5A025C11EE100FB5A70 /* Extensions */,
+				313DBD3D25BCFD1D00A5306C /* Assets */,
+				313DBD3C25BCFCCB00A5306C /* Views */,
+				313DBD3B25BCFCC300A5306C /* Models */,
+				313DBD3A25BCFCB500A5306C /* Controllers */,
 			);
 			path = OneTheMap;
 			sourceTree = "<group>";
 		};
-		313DBD3A25BCFCB500A5306C /* Controller */ = {
+		313DBD3A25BCFCB500A5306C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				313DBD2825BCEEBF00A5306C /* LoginViewController.swift */,
@@ -142,12 +142,11 @@
 				313DBD6025BDFDFE00A5306C /* LocationMapViewController.swift */,
 				313DBD6525BE29BE00A5306C /* LocationPostingViewController.swift */,
 				313DBD7425BE596300A5306C /* LocationConfirmViewController.swift */,
-				313DBD7725BE5F7200A5306C /* ViewController+Extension.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		313DBD3B25BCFCC300A5306C /* Model */ = {
+		313DBD3B25BCFCC300A5306C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				310322B825BFE5F200690E40 /* Response */,
@@ -155,16 +154,16 @@
 				313DBD3E25BCFE0B00A5306C /* NetworkClient.swift */,
 				313DBD7A25BE86DE00A5306C /* Pin.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		313DBD3C25BCFCCB00A5306C /* View */ = {
+		313DBD3C25BCFCCB00A5306C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				313DBD2A25BCEEBF00A5306C /* Main.storyboard */,
-				313DBD2F25BCEEBF00A5306C /* LaunchScreen.storyboard */,
+				313DBD2425BCEEBF00A5306C /* AppDelegate.swift */,
+				313DBD2625BCEEBF00A5306C /* SceneDelegate.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		313DBD3D25BCFD1D00A5306C /* Assets */ = {
@@ -173,6 +172,23 @@
 				313DBD2D25BCEEBF00A5306C /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		31DAC5A025C11EE100FB5A70 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				313DBD7725BE5F7200A5306C /* ViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31DAC5A325C11F7200FB5A70 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				313DBD2A25BCEEBF00A5306C /* Main.storyboard */,
+				313DBD2F25BCEEBF00A5306C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,7 +437,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.OneTheMap.OneTheMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.OneTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,7 +456,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.OneTheMap.OneTheMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gavin.OneTheMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

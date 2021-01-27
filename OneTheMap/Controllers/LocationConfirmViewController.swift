@@ -13,7 +13,8 @@ class LocationConfirmViewController: UIViewController {
     var pin: Pin!
     
     @IBOutlet weak var mapView: MKMapView!
-
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -22,9 +23,13 @@ class LocationConfirmViewController: UIViewController {
     }
     
     @IBAction func confirm(_ sender: Any) {
+        indicator.startAnimating()
         NetworkClient.postLocation(firstName: pin.user.firstName, lastName: pin.user.lastName, mapString: pin.address, mediaURL: pin.mediaURL, latitude: pin.coordinate.latitude, longitude: pin.coordinate.longitude) { (success, error) in
+            self.indicator.stopAnimating()
             if success {
                 self.navigationController?.dismiss(animated: true)
+            } else {
+                self.showAlert(message: error?.localizedDescription ?? "")
             }
         }
     }

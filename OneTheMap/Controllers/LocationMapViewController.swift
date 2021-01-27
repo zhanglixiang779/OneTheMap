@@ -15,8 +15,10 @@ class LocationMapViewController: BaseLocationUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        indicator.startAnimating()
         fetchLocations {
             self.constructAnnotationViews()
+            self.indicator.stopAnimating()
         }
     }
     

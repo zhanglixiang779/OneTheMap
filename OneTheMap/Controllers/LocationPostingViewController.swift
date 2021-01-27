@@ -12,7 +12,7 @@ class LocationPostingViewController: UIViewController {
 
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var mediaURL: UITextField!
-    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,15 +24,16 @@ class LocationPostingViewController: UIViewController {
     @IBAction func findLocation(_ sender: Any) {
         
         guard let location = location.text, !location.isEmpty else {
-            showAlert(title: "Failed", message: "Please enter a valid location")
+            showAlert(message: "Please enter a valid location")
             return
         }
         
         guard let url = mediaURL.text, !url.isEmpty else {
-            showAlert(title: "Failed", message: "Please enter a media url")
+            showAlert(message: "Please enter a media url")
             return
         }
         
+        indicator.startAnimating()
         NetworkClient.getUserInfo(completion: handleUserInfo(user:error:))
     }
     
@@ -44,16 +45,19 @@ class LocationPostingViewController: UIViewController {
     
     private func handleUserInfo(user: User?, error: Error?) {
         guard let user = user else {
-            showAlert(title: "Failed!", message: error?.localizedDescription ?? "")
+            indicator.stopAnimating()
+            showAlert(message: error?.localizedDescription ?? "")
             return
         }
         
         getCoordinate(addressString: location.text!) { (coordinate, error) in
             guard error == nil else {
-                self.showAlert(title: "Failed", message: "Please provide a valid address")
+                self.indicator.stopAnimating()
+                self.showAlert( message: "Please provide a valid address")
                 return
             }
             
+            self.indicator.stopAnimating()
             let pin = Pin(coordinate: coordinate, address: self.location.text!, mediaURL: self.mediaURL.text!, user: user)
             self.performSegue(withIdentifier: "toLocationConfirmPage", sender: pin)
         }

@@ -3,4 +3,54 @@
    uuid = "3E70F059-C095-4AD4-88F0-434349989506"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BD798F7-7E16-4D74-A3FF-71B0227C77F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OneTheMap/Controller/LocationTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8BD798F7-7E16-4D74-A3FF-71B0227C77F7 - 2186c9c45a3d57eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OneTheMap.LocationTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "OneTheMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lixiangzhang/Desktop/iOS%20Nano%20degree/homework/OneTheMap/OneTheMap/Controller/LocationTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "572">
+               </Location>
+               <Location
+                  uuid = "8BD798F7-7E16-4D74-A3FF-71B0227C77F7 - 9fe850b2257ba41e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in OneTheMap.LocationTableViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "OneTheMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lixiangzhang/Desktop/iOS%20Nano%20degree/homework/OneTheMap/OneTheMap/Controller/LocationTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

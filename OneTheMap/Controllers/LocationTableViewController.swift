@@ -15,8 +15,10 @@ class LocationTableViewController: BaseLocationUIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        indicator.startAnimating()
         fetchLocations {
             self.tableView.reloadData()
+            self.indicator.stopAnimating()
         }
     }
     

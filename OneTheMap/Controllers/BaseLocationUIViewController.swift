@@ -24,7 +24,12 @@ class BaseLocationUIViewController: UIViewController {
     
     func fetchLocations(completion: @escaping () -> Void) {
         NetworkClient.getLocations(number: 100) { (locations, error) in
-            self.locations = locations
+            if let error = error {
+                self.showAlert(message: error.localizedDescription)
+            } else {
+                self.locations = locations
+            }
+            
             completion()
         }
     }
